@@ -1,5 +1,7 @@
 ## UnOfficial Raja Ongkir SDK for Go Programming Language
 
+[![Build Status](https://travis-ci.org/Bhinneka/go-rajaongkir.svg?branch=master)](https://travis-ci.org/Bhinneka/go-rajaongkir)
+
 ## Bhinneka :blue_heart: Golang
 
 ### Simpe Usage
