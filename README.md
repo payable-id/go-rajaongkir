@@ -27,15 +27,15 @@
 
     func main() {
 
-      //Raja Ongkir Constructor, simply call ro.New
-      //Paramter 1: "Raja Ongkir API KEY"
-      //Paramter 2: HTTP Request Timeout
+      // Raja Ongkir Constructor, simply call ro.New
+      // Parameter 1: "Raja Ongkir API KEY"
+      // Parameter 2: HTTP Request Timeout
     	raja := ro.New("your-api-key", 10*time.Second)
 
-      // Paramter 1: City Origin ID
-      // Paramter 2: City Destination ID
-      // Paramter 3: Item's Weight
-      // Paramter 4: Courier's Name
+      // Parameter 1: City Origin ID
+      // Parameter 2: City Destination ID
+      // Parameter 3: Item's Weight
+      // Parameter 4: Courier's Name
     	q := ro.QueryRequest{Origin: "501", Destination: "114", Weight: 1700, Courier: "tiki"}
     	result := raja.GetCost(q)
 
