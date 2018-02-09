@@ -3,6 +3,7 @@
 ### Raja Ongkir's Website (https://rajaongkir.com)
 
 [![Build Status](https://travis-ci.org/Bhinneka/go-rajaongkir.svg?branch=master)](https://travis-ci.org/Bhinneka/go-rajaongkir)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Bhinneka/go-rajaongkir/blob/master/LICENSE)
 
 ## Bhinneka :blue_heart: Golang
 
