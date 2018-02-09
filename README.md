@@ -1,10 +1,19 @@
 ## UnOfficial Raja Ongkir SDK for Go Programming Language
 
+### Raja Ongkir Website
+    https://rajaongkir.com
+
 [![Build Status](https://travis-ci.org/Bhinneka/go-rajaongkir.svg?branch=master)](https://travis-ci.org/Bhinneka/go-rajaongkir)
 
 ## Bhinneka :blue_heart: Golang
 
+### Install
+  ```shell
+  go get github.com/Bhinneka/go-rajaongkir
+  ```
+
 ### Simpe Usage
+
 
   ```go
   package main
