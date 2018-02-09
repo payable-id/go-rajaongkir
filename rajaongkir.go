@@ -18,7 +18,7 @@ type rajaOngkir struct {
 }
 
 // New function, create rajaOngkir pointer
-// required paramter, your Raja Ongkir API KEY and timeout(http request timeout)
+// required parameter, your Raja Ongkir API KEY and timeout(http request timeout)
 func New(apiKey string, timeout time.Duration) RajaOngkirService {
 	httpRequest := newRequest(timeout)
 	return &rajaOngkir{
