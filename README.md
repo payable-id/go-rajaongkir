@@ -12,7 +12,7 @@
   go get github.com/Bhinneka/go-rajaongkir
   ```
 
-### Simpe Usage
+### Simple Usage
 
   - Get Cost Data
 
