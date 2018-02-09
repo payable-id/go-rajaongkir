@@ -1,7 +1,6 @@
 ## UnOfficial Raja Ongkir SDK for Go Programming Language
 
-### Raja Ongkir Website
-    https://rajaongkir.com
+### Raja Ongkir Website (https://rajaongkir.com)
 
 [![Build Status](https://travis-ci.org/Bhinneka/go-rajaongkir.svg?branch=master)](https://travis-ci.org/Bhinneka/go-rajaongkir)
 
