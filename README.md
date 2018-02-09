@@ -32,6 +32,10 @@
       // Parameter 1: "Raja Ongkir API KEY"
       // Parameter 2: HTTP Request Timeout
     	raja := ro.New("your-api-key", 10*time.Second)
+      //by default after construct, raja ongkir used Starter Env(Free account)
+      //to change Env, simply just change the env
+      //raja.Env = ro.Basic for basic account
+      //or raja.Env = ro.Pro for pro account
 
       // Parameter 1: City Origin ID
       // Parameter 2: City Destination ID
