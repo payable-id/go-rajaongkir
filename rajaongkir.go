@@ -207,3 +207,58 @@ func (r *rajaOngkir) GetCost(q QueryRequest) ServiceResult {
 
 	return ServiceResult{Error: errors.New("Invalid Request")}
 }
+
+//GetCity
+func (r *rajaOngkir) GetSubDistrict(q QueryRequest) ServiceResult {
+
+	//make headers map
+	headers := make(map[string]string)
+	headers["Content-Type"] = "application/json"
+
+	var (
+		//path
+		path string
+
+		//responseWrapper single result
+		responseWrapper struct {
+			Rajaongkir struct {
+				Query   interface{} `json:"query"`
+				Status  Status      `json:"status"`
+				Results SubDistrict `json:"results"`
+			} `json:"rajaongkir"`
+		}
+
+		//responseWrapperList list result
+		responseWrapperList struct {
+			Rajaongkir struct {
+				Query   interface{}   `json:"query"`
+				Status  Status        `json:"status"`
+				Results []SubDistrict `json:"results"`
+			} `json:"rajaongkir"`
+		}
+	)
+
+	if q.CityID != "" && q.ProvinceID == "" {
+		path = fmt.Sprintf("subdistrict?city=%s", q.CityID)
+
+		err := r.call("GET", path, nil, &responseWrapperList, headers)
+
+		if err != nil {
+			return ServiceResult{Error: err}
+		}
+
+		return ServiceResult{Result: responseWrapperList.Rajaongkir.Results}
+
+	} else if q.CityID != "" && q.ProvinceID != "" {
+		path = fmt.Sprintf("subdistrict?id=%s", q.SubDistrictID)
+
+		err := r.call("GET", path, nil, &responseWrapper, headers)
+
+		if err != nil {
+			return ServiceResult{Error: err}
+		}
+
+		return ServiceResult{Result: responseWrapper.Rajaongkir.Results}
+	}
+	return ServiceResult{Error: errors.New("Invalid Request")}
+}

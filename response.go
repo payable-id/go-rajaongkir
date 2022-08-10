@@ -22,6 +22,16 @@ type City struct {
 	PostalCode string `json:"postal_code"`
 }
 
+type SubDistrict struct {
+	SubDistrictID   string `json:"subdistrict_id"`
+	CityID          string `json:"city_id"`
+	ProvinceID      string `json:"province_id"`
+	Province        string `json:"province"`
+	Type            string `json:"type"`
+	CityName        string `json:"city_name"`
+	SubDistrictName string `json:"subdistrict_name"`
+}
+
 //CostWrapper
 type CostWrapper struct {
 	Rajaongkir struct {
