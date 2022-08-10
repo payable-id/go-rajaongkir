@@ -191,6 +191,11 @@ func (r *rajaOngkir) GetCost(q QueryRequest) ServiceResult {
 		query.Set("weight", weightString)
 		query.Set("courier", q.Courier)
 
+		if r.Env == Pro {
+			query.Set("originType", q.OriginType)
+			query.Set("destinationType", q.DestinationType)
+		}
+
 		err := r.call("POST", "cost", strings.NewReader(query.Encode()), &costWrapper, headers)
 
 		if err != nil {
